@@ -42,12 +42,12 @@
      showgrid="false"
      units="mm"
      inkscape:zoom="1.0487684"
-     inkscape:cx="551.51226"
-     inkscape:cy="422.13868"
+     inkscape:cx="353.66114"
+     inkscape:cy="460.27865"
      inkscape:window-x="1920"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer4"
+     inkscape:current-layer="layer2"
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:snap-perpendicular="true"
@@ -363,6 +363,34 @@
        height="617.13593"
        x="27.337542"
        y="27.337572" />
+    <g
+       id="g1061"
+       transform="translate(224.34611,88.163322)">
+      <circle
+         r="4.2519684"
+         cy="528.37213"
+         cx="-169.07048"
+         id="path999"
+         style="display:inline;opacity:1;fill:#000000;fill-opacity:0.99236642;stroke:none;stroke-width:0.30699271;stroke-miterlimit:4;stroke-dasharray:2.4559415, 2.4559415;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         r="4.2519684"
+         cy="528.37213"
+         cx="392.18933"
+         id="path999-3"
+         style="display:inline;opacity:1;fill:#000000;fill-opacity:0.99236642;stroke:none;stroke-width:0.30699271;stroke-miterlimit:4;stroke-dasharray:2.45594142, 2.45594142;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         r="4.2519684"
+         cy="-32.887707"
+         cx="392.18933"
+         id="path999-6"
+         style="display:inline;opacity:1;fill:#000000;fill-opacity:0.99236642;stroke:none;stroke-width:0.30699271;stroke-miterlimit:4;stroke-dasharray:2.45594142, 2.45594142;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         r="4.2519684"
+         cy="-32.887707"
+         cx="-169.07048"
+         id="path999-7"
+         style="display:inline;opacity:1;fill:#000000;fill-opacity:0.99236642;stroke:none;stroke-width:0.30699271;stroke-miterlimit:4;stroke-dasharray:2.45594142, 2.45594142;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -372,7 +400,7 @@
     <g
        id="g1237"
        style="opacity:0.98000004"
-       transform="translate(-4.6360396,-9.3206029)">
+       transform="translate(-8.8880224,-3.8965158)">
       <rect
          y="46.246124"
          x="45.738419"
@@ -394,7 +422,7 @@
        id="use6483"
        width="100%"
        height="100%"
-       transform="translate(556.62379,9.3206029)" />
+       transform="translate(569.76382)" />
     <use
        x="0"
        y="0"
@@ -402,7 +430,7 @@
        id="use6485"
        width="100%"
        height="100%"
-       transform="translate(4.6360396,547.13521)" />
+       transform="translate(1.8530441e-8,539.71658)" />
     <use
        x="0"
        y="0"
@@ -410,7 +438,7 @@
        id="use6487"
        width="100%"
        height="100%"
-       transform="translate(556.62379,547.13521)" />
+       transform="translate(569.76381,539.71658)" />
     <g
        id="g6928"
        transform="translate(-1.7298552e-7,-2.5972636)">
@@ -430,7 +458,7 @@
            id="use6489"
            width="100%"
            height="100%"
-           transform="rotate(90,63.302634,124.36886)"
+           transform="rotate(90,63.888686,129.20691)"
            inkscape:tile-cx="127.13337"
            inkscape:tile-cy="116.34183"
            inkscape:tile-w="47.225201"
