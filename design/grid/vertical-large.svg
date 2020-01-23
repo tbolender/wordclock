@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="218mm"
+   width="219mm"
    height="35mm"
-   viewBox="0 0 218 35"
+   viewBox="0 0 219 35"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
@@ -25,16 +25,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="362.69517"
-     inkscape:cy="146.11789"
+     inkscape:zoom="7.9195959"
+     inkscape:cx="836.35911"
+     inkscape:cy="51.607826"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
-     inkscape:window-width="2048"
-     inkscape:window-height="1088"
-     inkscape:window-x="0"
-     inkscape:window-y="27"
+     inkscape:window-width="1920"
+     inkscape:window-height="1043"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -117,6 +117,20 @@
        inkscape:locked="false"
        inkscape:label=""
        inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="0,0"
+       orientation="1,0"
+       id="guide824"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="219,0"
+       orientation="1,0"
+       id="guide826"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
   </sodipodi:namedview>
   <metadata
      id="metadata5">
@@ -136,10 +150,10 @@
      id="layer1"
      transform="translate(0,-262)">
     <path
-       style="opacity:1;fill:#000000;fill-opacity:0.15267178;stroke:none;stroke-width:0.66774166;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.19678716"
-       d="M 26.455078,0 V 75.589844 H 0 V 132.2832 H 823.93555 V 75.589844 H 797.47852 V 0 H 752.12695 V 66.142578 H 748.3457 V 0 h -61.98437 v 66.142578 h -7.5586 V 0 h -61.98437 v 66.142578 h -3.7793 V 0 h -61.98437 v 66.142578 h -7.5586 V 0 h -61.98437 v 66.142578 h -3.7793 V 0 h -61.98437 v 66.142578 h -7.5586 V 0 h -61.98437 v 66.142578 h -3.7793 V 0 h -61.98437 v 66.142578 h -7.5586 V 0 h -61.98437 v 66.142578 h -3.78125 V 0 h -61.98242 v 66.142578 h -7.56055 V 0 H 75.589844 V 66.142578 H 71.810547 V 0 Z"
-       transform="matrix(0.26458333,0,0,0.26458333,0,262)"
+       style="opacity:1;fill:#000000;fill-opacity:0.15267178;stroke:none;stroke-width:0.17667331;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.19678716"
+       d="m 7.4997669,262 v 19.99981 H 0 v 15.00012 h 22.949986 c 1.99e-4,-1.65681 2.686524,-2.99986 6.00015,-2.99982 3.313627,-4e-5 5.999953,1.34301 6.000152,2.99982 h 5.899899 c 1.99e-4,-1.65681 2.686523,-2.99986 6.000149,-2.99982 3.313425,10e-5 5.999434,1.34311 5.999633,2.99982 h 5.900415 c 1.99e-4,-1.65671 2.686208,-2.99972 5.999633,-2.99982 3.313627,-4e-5 5.999953,1.34301 6.000152,2.99982 h 5.899899 c 1.99e-4,-1.65681 2.686523,-2.99986 6.000149,-2.99982 3.313627,-4e-5 5.999953,1.34301 6.000152,2.99982 h 5.899896 c 1.99e-4,-1.65681 2.686527,-2.99986 6.000155,-2.99982 3.31342,10e-5 5.99943,1.34311 5.99963,2.99982 h 5.90042 c 2e-4,-1.65671 2.68621,-2.99972 5.99963,-2.99982 3.31363,-4e-5 5.99995,1.34301 6.00015,2.99982 h 5.8999 c 2e-4,-1.65681 2.68652,-2.99986 6.00015,-2.99982 3.31363,-4e-5 5.99995,1.34301 6.00015,2.99982 h 5.8999 c 2e-4,-1.65671 2.68621,-2.99972 5.99963,-2.99982 3.31363,-4e-5 5.99995,1.34301 6.00015,2.99982 h 5.8999 c 2e-4,-1.65681 2.68652,-2.99986 6.00015,-2.99982 3.31363,-4e-5 5.99995,1.34301 6.00015,2.99982 h 5.8999 c 2e-4,-1.65681 2.68652,-2.99986 6.00015,-2.99982 3.31342,10e-5 5.99943,1.34311 5.99963,2.99982 H 219 v -15.00012 h -7.50028 V 262 h -11.99927 v 17.50022 h -1.00046 V 262 h -16.40003 v 17.50022 h -1.99988 V 262 h -16.40003 v 17.50022 h -0.99994 V 262 h -16.40003 v 17.50022 H 144.3002 V 262 h -16.40003 v 17.50022 h -0.99994 V 262 H 110.5002 v 17.50022 h -1.99988 V 262 H 92.100287 v 17.50022 h -0.99994 V 262 H 74.700316 v 17.50022 H 72.700437 V 262 H 56.300406 v 17.50022 H 55.29995 V 262 H 38.900435 v 17.50022 H 36.900039 V 262 H 20.500007 v 17.50022 H 19.500068 V 262 Z"
        id="rect815"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
   </g>
 </svg>
