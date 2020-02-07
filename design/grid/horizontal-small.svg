@@ -25,16 +25,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="678.43557"
-     inkscape:cy="75.015312"
+     inkscape:zoom="1.4"
+     inkscape:cx="382.6405"
+     inkscape:cy="68.429972"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
-     inkscape:window-height="1043"
-     inkscape:window-x="1920"
-     inkscape:window-y="0"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -133,7 +133,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -144,9 +144,10 @@
      transform="translate(0,-262)">
     <path
        style="opacity:1;fill:#000000;fill-opacity:0.15267178;stroke:none;stroke-width:0.66774166;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.19678716"
-       d="m 51.023438,0 v 117.16602 a 7.559055,15.11811 0 0 1 7.558593,15.11718 h 5.669922 V 66.142578 H 68.03125 V 132.2832 h 57.32422 V 66.142578 h 7.55859 V 132.2832 h 57.32227 V 66.142578 h 3.77929 V 132.2832 h 59.2129 V 66.142578 h 3.77929 V 132.2832 h 57.32422 V 66.142578 h 7.55859 V 132.2832 h 57.32227 V 66.142578 h 3.7793 V 132.2832 h 59.21289 V 66.142578 h 3.7793 V 132.2832 h 57.32421 V 66.142578 h 7.5586 V 132.2832 h 57.32226 V 66.142578 h 3.7793 V 132.2832 h 59.21289 V 66.142578 h 3.7793 V 132.2832 h 57.32422 V 66.142578 h 7.55859 V 132.2832 h 56.0625 V 66.142578 h 3.7793 V 132.2832 h 5.66797 a 7.5590551,15.11811 0 0 1 7.56054,-15.11718 V 0 Z"
+       d="M 51.023438,2.6456693 V 117.16602 c 4.174389,5.1e-4 7.558336,6.7684 7.558593,15.11718 h 5.669922 V 66.142578 H 68.03125 V 132.2832 h 57.32422 V 66.142578 h 7.55859 V 132.2832 h 57.32227 V 66.142578 h 3.77929 V 132.2832 h 59.2129 V 66.142578 h 3.77929 V 132.2832 h 57.32422 V 66.142578 h 7.55859 V 132.2832 h 57.32227 V 66.142578 h 3.7793 V 132.2832 h 59.21289 V 66.142578 h 3.7793 V 132.2832 h 57.32421 V 66.142578 h 7.5586 V 132.2832 h 57.32226 V 66.142578 h 3.7793 V 132.2832 h 59.21289 V 66.142578 h 3.7793 V 132.2832 h 57.32422 V 66.142578 h 7.55859 V 132.2832 h 56.0625 V 66.142578 h 3.7793 V 132.2832 h 5.66797 c 2.6e-4,-8.3503 3.38539,-15.11882 7.56054,-15.11718 V 2.6456693 Z"
        transform="matrix(0.26458333,0,0,0.26458333,0,262)"
        id="rect815"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
   </g>
 </svg>
