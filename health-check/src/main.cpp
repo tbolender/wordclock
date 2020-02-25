@@ -9,10 +9,7 @@ int brightness = 10;
 int row = 9;
 int minute = 0;
 
-void setup() {
-    // Sanity check delay - allows reprogramming if accidently blowing power w/leds
-    delay(2000);
-
+void setupTime() {
     FastLED.addLeds<WS2812B, DATA_PIN>(leds, NUM_LEDS);
     FastLED.setBrightness(brightness);
 
@@ -23,7 +20,14 @@ void setup() {
     FastLED.show();
 }
 
-void loop() {
+void setup() {
+    // Sanity check delay - allows reprogramming if accidently blowing power w/leds
+    delay(3000);
+
+    setupTime();
+}
+
+void loopTime() {
     // Set minutes
     leds[0] = minute > 0 ? CRGB::White : CRGB::Black;
     leds[111] = minute > 1 ? CRGB::White : CRGB::Black;
@@ -44,5 +48,10 @@ void loop() {
 
     // Flush
     FastLED.show();
+}
+
+void loop() {
+    loopTime();
+
     delay(1000);
 }
