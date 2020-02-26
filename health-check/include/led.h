@@ -2,6 +2,7 @@
 #define HEALTH_CHECK_LED_H
 
 #include <FastLED.h>
+#include <RTClib.h>
 
 
 #define NUM_LEDS 114
@@ -10,7 +11,10 @@
 
 void setupLed();
 
-void loopLed();
+
+void setMinutes(uint8_t minute);
+
+void setTime(DateTime time);
 
 
 #endif //HEALTH_CHECK_LED_H

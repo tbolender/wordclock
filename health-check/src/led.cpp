@@ -4,7 +4,6 @@
 CRGB leds[NUM_LEDS];
 int brightness = 10;
 int row = 9;
-int minute = 0;
 
 
 void setupLed() {
@@ -19,14 +18,16 @@ void setupLed() {
 }
 
 
-void loopLed() {
-    // Set minutes
-    leds[0] = minute > 0 ? CRGB::White : CRGB::Black;
-    leds[111] = minute > 1 ? CRGB::White : CRGB::Black;
-    leds[112] = minute > 2 ? CRGB::White : CRGB::Black;
-    leds[113] = minute > 3 ? CRGB::White : CRGB::Black;
-    minute = ++minute % 5;
+void setMinutes(uint8_t second) {
+    second %= 5;
+    leds[0] = second > 0 ? CRGB::White : CRGB::Black;
+    leds[111] = second > 1 ? CRGB::White : CRGB::Black;
+    leds[112] = second > 2 ? CRGB::White : CRGB::Black;
+    leds[113] = second > 3 ? CRGB::White : CRGB::Black;
+}
 
+
+void setTime(DateTime time) {
     // Set row
     for(int i = 1 + row*11; i < 1 + 11 + row*11; i++)
         leds[i] = CRGB::Black;
