@@ -1,7 +1,6 @@
 #include <Arduino.h>
 
 #include <led.h>
-#include <timer.h>
 #include <wifi.h>
 #include <ntp.h>
 
