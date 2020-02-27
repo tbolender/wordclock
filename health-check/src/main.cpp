@@ -2,10 +2,15 @@
 
 #include <led.h>
 #include <timer.h>
+#include <wifi.h>
+#include <ntp.h>
+
 #include <Wire.h>
 
 bool error = true;
 bool errorShow = false;
+
+NTP ntp;
 
 void setup() {
     Serial.begin(74880);
@@ -13,21 +18,27 @@ void setup() {
     // Sanity check delay - allows reprogramming if accidently blowing power w/leds
     delay(3000);
 
-    error = !rtc.begin();
+    Serial.println("Connecting...");
+    setupWifi();
+    Serial.println("Connected!");
 
-    setupLed();
-    setupTimer();
+    ntp.setup();
+    //setupLed();
+    //setupTimer();
 }
 
 void loop() {
-    if(error) {
-        setMinutes(errorShow ? 4 : 0);
-        errorShow = !errorShow;
-    }
-    else {
-        setMinutes(rtc.now().second());
-    }
-    setTime(rtc.now());
+    ntp.updateIfNecessary();
+
+    Serial.print(ntp.getHours());
+    Serial.print(":");
+    Serial.print(ntp.getMinutes());
+    Serial.print(":");
+    Serial.print(ntp.getSeconds());
+    Serial.println();
+
+    //setMinutes(getTimerSeconds());
+    //setTime();
 
     delay(1000);
 }
