@@ -9,9 +9,10 @@ class NTP {
 protected:
     WiFiUDP wifi;
     NTPClient client;
+
 public:
     NTP();
-    ~NTP();
+    virtual ~NTP();
 
     void setup();
 

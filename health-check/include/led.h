@@ -11,10 +11,9 @@
 
 void setupLed();
 
+void setMinutes(int minute);
 
-void setMinutes(uint8_t minute);
-
-void setTime(DateTime time);
+void setTime();
 
 
 #endif //HEALTH_CHECK_LED_H

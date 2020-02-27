@@ -5,9 +5,7 @@ NTPClient* timeClient;
 NTP::NTP() : client(wifi) {
 }
 
-
-NTP::~NTP() {
-}
+NTP::~NTP() = default;
 
 void NTP::setup() {
     client.begin();

@@ -22,8 +22,7 @@ void setup() {
     Serial.println("Connected!");
 
     ntp.setup();
-    //setupLed();
-    //setupTimer();
+    setupLed();
 }
 
 void loop() {
@@ -36,8 +35,8 @@ void loop() {
     Serial.print(ntp.getSeconds());
     Serial.println();
 
-    //setMinutes(getTimerSeconds());
-    //setTime();
+    setMinutes(ntp.getSeconds());
+    setTime();
 
     delay(1000);
 }

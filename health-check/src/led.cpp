@@ -1,10 +1,8 @@
 #include <led.h>
 
-
 CRGB leds[NUM_LEDS];
 int brightness = 10;
 int row = 9;
-
 
 void setupLed() {
     FastLED.addLeds<WS2812B, DATA_PIN>(leds, NUM_LEDS);
@@ -17,8 +15,7 @@ void setupLed() {
     FastLED.show();
 }
 
-
-void setMinutes(uint8_t second) {
+void setMinutes(int second) {
     second %= 5;
     leds[0] = second > 0 ? CRGB::White : CRGB::Black;
     leds[111] = second > 1 ? CRGB::White : CRGB::Black;
@@ -26,8 +23,7 @@ void setMinutes(uint8_t second) {
     leds[113] = second > 3 ? CRGB::White : CRGB::Black;
 }
 
-
-void setTime(DateTime time) {
+void setTime() {
     // Set row
     for(int i = 1 + row*11; i < 1 + 11 + row*11; i++)
         leds[i] = CRGB::Black;
