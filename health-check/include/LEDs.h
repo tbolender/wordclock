@@ -1,8 +1,8 @@
-#ifndef HEALTH_CHECK_LED_H
-#define HEALTH_CHECK_LED_H
+#ifndef HEALTH_CHECK_LEDS_H
+#define HEALTH_CHECK_LEDS_H
 
 #include <FastLED.h>
-#include <ntp.h>
+#include <NTP.h>
 
 #define NUM_LEDS 114
 #define LED_DATA_PIN D4
@@ -23,4 +23,4 @@ public:
     void setTime(int hours, int minutes);
 };
 
-#endif //HEALTH_CHECK_LED_H
+#endif //HEALTH_CHECK_LEDS_H

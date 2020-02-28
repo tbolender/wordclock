@@ -1,8 +1,8 @@
 #include <Arduino.h>
 
-#include <led.h>
-#include <wifi.h>
-#include <ntp.h>
+#include <LEDs.h>
+#include <Wifi.h>
+#include <NTP.h>
 
 NTP ntp;
 LEDs leds;

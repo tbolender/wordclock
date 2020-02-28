@@ -1,4 +1,4 @@
-#include <ntp.h>
+#include <NTP.h>
 
 NTPClient* timeClient;
 
