@@ -2,18 +2,25 @@
 #define HEALTH_CHECK_LED_H
 
 #include <FastLED.h>
-#include <RTClib.h>
-
+#include <ntp.h>
 
 #define NUM_LEDS 114
-#define DATA_PIN D4
+#define LED_DATA_PIN D4
 
+class LEDs {
+protected:
+    CRGB leds[NUM_LEDS];
 
-void setupLed();
+public:
+    LEDs();
+    virtual ~LEDs();
 
-void setMinutes(int minute);
+    void setup();
 
-void setTime();
+    void setBrightness(uint8_t brightness);
 
+    void setTime(NTP& ntp);
+    void setTime(int hours, int minutes);
+};
 
 #endif //HEALTH_CHECK_LED_H

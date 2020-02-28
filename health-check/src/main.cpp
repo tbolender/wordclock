@@ -4,12 +4,8 @@
 #include <wifi.h>
 #include <ntp.h>
 
-#include <Wire.h>
-
-bool error = true;
-bool errorShow = false;
-
 NTP ntp;
+LEDs leds;
 
 void setup() {
     Serial.begin(74880);
@@ -22,7 +18,7 @@ void setup() {
     Serial.println("Connected!");
 
     ntp.setup();
-    setupLed();
+    leds.setup();
 }
 
 void loop() {
@@ -35,8 +31,7 @@ void loop() {
     Serial.print(ntp.getSeconds());
     Serial.println();
 
-    setMinutes(ntp.getSeconds());
-    setTime();
+    leds.setTime(ntp);
 
     delay(1000);
 }
