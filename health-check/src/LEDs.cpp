@@ -7,11 +7,7 @@ LEDs::~LEDs() = default;
 void LEDs::setup() {
     FastLED.addLeds<WS2812B, LED_DATA_PIN>(leds, NUM_LEDS);
 
-    // Disable all leds
-    for(auto& led : leds) {
-        led = CRGB::Black;
-    }
-    FastLED.show();
+    clear();
 }
 
 void LEDs::setBrightness(uint8_t brightness) {
@@ -23,5 +19,12 @@ CRGB &LEDs::operator[](int index) {
 }
 
 void LEDs::show() {
+    FastLED.show();
+}
+
+void LEDs::clear() {
+    for(auto& led : leds) {
+        led = CRGB::Black;
+    }
     FastLED.show();
 }

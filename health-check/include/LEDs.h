@@ -22,6 +22,7 @@ public:
     CRGB& operator[](int index);
 
     void show();
+    void clear();
 };
 
 #endif //WORDCLOCK_LEDS_H
