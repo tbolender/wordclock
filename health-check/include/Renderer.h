@@ -16,6 +16,7 @@ public:
 
     void render(NTP& ntp);
     void render(int hours, int minutes);
+    void render(const bool* ledMask);
 };
 
 

@@ -11,9 +11,12 @@ void Renderer::render(NTP& ntp) {
 
 void Renderer::render(int hours, int minutes) {
     bool* layoutMask = layout.getLayout(hours, minutes);
+    render(layoutMask);
+}
 
+void Renderer::render(const bool* ledMask) {
     for(int i = 0; i < NUM_LEDS; i++) {
-        leds[i] = layoutMask[i] ? CRGB::White : CRGB::Black;
+        leds[i] = ledMask[i] ? CRGB::White : CRGB::Black;
     }
 
     leds.show();
