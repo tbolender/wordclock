@@ -88,6 +88,12 @@ void Layout::setHours(int hours, int minutes) {
     }
 }
 
+bool* Layout::getSingleMinutesLayout() {
+    clear();
+    setSingleMinutes(4);
+    return ledMask;
+}
+
 bool* Layout::getLayout(int hours, int minutes) {
     clear();
 

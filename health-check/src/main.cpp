@@ -30,6 +30,7 @@ void setup() {
     while(!wifi.isConnected()) {
         delay(500);
     }
+    renderer.showConnected();
     Serial.println("Connected!");
 
     ntp.setup();

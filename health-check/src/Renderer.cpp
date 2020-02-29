@@ -1,5 +1,7 @@
 #include <Renderer.h>
 
+#include <defines.h>
+
 Renderer::Renderer(LEDs &leds, Layout& layout) : leds(leds), layout(layout) {
 }
 
@@ -20,4 +22,16 @@ void Renderer::render(const bool* ledMask) {
     }
 
     leds.show();
+}
+
+void Renderer::showConnected() {
+    for(int i = 0; i < 3; i++) {
+        leds.setBrightness(FULL_BRIGHTNESS);
+        render(layout.getSingleMinutesLayout());
+        delay(500);
+
+        leds.clear();
+        delay(500);
+
+    }
 }
