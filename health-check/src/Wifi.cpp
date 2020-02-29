@@ -1,6 +1,6 @@
 #include <Wifi.h>
 
-#include <defines.h>
+#include <credentials.h>
 
 #include <ESP8266WiFi.h>
 

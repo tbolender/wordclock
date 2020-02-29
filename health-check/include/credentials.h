@@ -1,0 +1,8 @@
+#ifndef WORDCLOCK_CREDENTIALS_H
+#define WORDCLOCK_CREDENTIALS_H
+
+// Adapt to your home
+#define WIFI_SSID ""
+#define WIFI_PASSWORD ""
+
+#endif //WORDCLOCK_CREDENTIALS_H
