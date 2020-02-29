@@ -3,7 +3,10 @@
 
 #define NUM_LEDS 114
 
-#define FULL_BRIGHTNESS 100
-#define NIGHT_BRIGHTNESS 50
+// One hour
+#define TIMEZONE_OFFSET 60 * 60
+
+#define FULL_BRIGHTNESS 120
+#define NIGHT_BRIGHTNESS 80
 
 #endif //WORDCLOCK_DEFINES_H

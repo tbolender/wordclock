@@ -12,6 +12,7 @@ protected:
 
 public:
     NTP();
+    NTP(long offset);
     virtual ~NTP();
 
     void setup();

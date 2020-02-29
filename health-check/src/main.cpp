@@ -11,7 +11,7 @@
 #include <Renderer.h>
 
 Wifi wifi;
-NTP ntp;
+NTP ntp(TIMEZONE_OFFSET);
 LEDs leds;
 Layout layout;
 Renderer renderer(leds, layout);

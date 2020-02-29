@@ -2,7 +2,10 @@
 
 NTPClient* timeClient;
 
-NTP::NTP() : client(wifi) {
+NTP::NTP() : NTP(0) {
+}
+
+NTP::NTP(long offset) : client(wifi, offset) {
 }
 
 NTP::~NTP() = default;
