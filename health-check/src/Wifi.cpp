@@ -1,13 +1,11 @@
 #include <Wifi.h>
 
-#include <credentials.h>
-
 #include <ESP8266WiFi.h>
 
-void setupWifi() {
-    WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+void Wifi::connect(const char* ssid, const char* passphrase) {
+    WiFi.begin(ssid, passphrase);
+}
 
-    while(WiFi.status() != WL_CONNECTED) {
-        delay(500);
-    }
+bool Wifi::isConnected() const {
+    return WiFi.status() == WL_CONNECTED;
 }

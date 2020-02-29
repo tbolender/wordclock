@@ -1,5 +1,7 @@
 #include <Arduino.h>
 
+
+#include <credentials.h>
 #include <defines.h>
 
 #include <LEDs.h>
@@ -8,6 +10,7 @@
 #include <Layout.h>
 #include <Renderer.h>
 
+Wifi wifi;
 NTP ntp;
 LEDs leds;
 Layout layout;
@@ -23,7 +26,10 @@ void setup() {
     leds.setBrightness(BRIGHTNESS);
 
     Serial.println("Connecting...");
-    setupWifi();
+    wifi.connect(WIFI_SSID, WIFI_PASSWORD);
+    while(!wifi.isConnected()) {
+        delay(500);
+    }
     Serial.println("Connected!");
 
     ntp.setup();
