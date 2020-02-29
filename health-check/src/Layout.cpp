@@ -50,6 +50,12 @@ void Layout::clear() {
     }
 }
 
+void Layout::setItIs() {
+    for(int i : IT_IS) {
+        ledMask[i] = true;
+    }
+}
+
 void Layout::setSingleMinutes(int minutes) {
     minutes %= 5;
     if(minutes == 0)
@@ -80,9 +86,10 @@ void Layout::setHours(int hours, int minutes) {
     }
 }
 
-bool *Layout::getLayout(int hours, int minutes) {
+bool* Layout::getLayout(int hours, int minutes) {
     clear();
     // TODO: Figure out what happens to non-initialized array elements
+    setItIs();
     setSingleMinutes(minutes);
     setMinutes(hours);
     setHours(hours, minutes);

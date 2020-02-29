@@ -12,6 +12,7 @@ protected:
     bool ledMask[114];
 
     void clear();
+    void setItIs();
     void setSingleMinutes(int minutes);
     void setMinutes(int minutes);
     void setHours(int hours, int minutes);
