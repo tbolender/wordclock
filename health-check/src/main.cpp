@@ -3,9 +3,11 @@
 #include <LEDs.h>
 #include <Wifi.h>
 #include <NTP.h>
+#include <Layout.h>
 
 NTP ntp;
 LEDs leds;
+Layout layout;
 
 void setup() {
     Serial.begin(74880);
