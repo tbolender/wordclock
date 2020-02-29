@@ -23,6 +23,8 @@ public:
     int getSeconds();
 
     void updateIfNecessary();
+
+    String getFormattedTime();
 };
 
 #endif //WORDCLOCK_NTP_H

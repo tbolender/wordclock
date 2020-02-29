@@ -39,12 +39,7 @@ void setup() {
 void loop() {
     ntp.updateIfNecessary();
 
-    Serial.print(ntp.getHours());
-    Serial.print(":");
-    Serial.print(ntp.getMinutes());
-    Serial.print(":");
-    Serial.print(ntp.getSeconds());
-    Serial.println();
+    Serial.println(ntp.getFormattedTime());
 
     renderer.render(ntp);
 

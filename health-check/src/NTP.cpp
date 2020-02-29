@@ -26,3 +26,7 @@ int NTP::getSeconds() {
 void NTP::updateIfNecessary() {
     client.update();
 }
+
+String NTP::getFormattedTime() {
+    return client.getFormattedTime();
+}
