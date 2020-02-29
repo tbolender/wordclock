@@ -77,7 +77,7 @@ void Layout::setMinutes(int minutes) {
 }
 
 void Layout::setHours(int hours, int minutes) {
-    if(minutes > 25)
+    if(minutes >= 25)
         ++hours;
     hours %= 12;
 
