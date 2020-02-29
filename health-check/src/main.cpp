@@ -1,5 +1,7 @@
 #include <Arduino.h>
 
+#include <defines.h>
+
 #include <LEDs.h>
 #include <Wifi.h>
 #include <NTP.h>
@@ -17,12 +19,14 @@ void setup() {
     // Sanity check delay - allows reprogramming if accidently blowing power w/leds
     delay(3000);
 
+    leds.setup();
+    leds.setBrightness(BRIGHTNESS);
+
     Serial.println("Connecting...");
     setupWifi();
     Serial.println("Connected!");
 
     ntp.setup();
-    leds.setup();
 }
 
 void loop() {
@@ -37,5 +41,5 @@ void loop() {
 
     renderer.render(ntp);
 
-    delay(1000);
+    delay(10 * 1000);
 }
