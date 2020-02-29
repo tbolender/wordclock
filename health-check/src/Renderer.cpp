@@ -1,7 +1,5 @@
 #include <Renderer.h>
 
-#include <defines.h>
-
 Renderer::Renderer(LEDs &leds, Layout& layout) : leds(leds), layout(layout) {
 }
 
@@ -25,6 +23,5 @@ void Renderer::render(const bool* ledMask) {
 }
 
 void Renderer::showWifiStatus(bool working) {
-    leds.setBrightness(FULL_BRIGHTNESS);
     render(layout.getSingleMinutesLayout(working ? 4 : 0));
 }
