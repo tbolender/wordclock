@@ -61,7 +61,7 @@ void Layout::setSingleMinutes(int minutes) {
     if(minutes == 0)
         return;
 
-    for(int i = 0; i < minutes; i++) {
+    for(int i = 0; i <= minutes; i++) {
         ledMask[SINGLE_MINUTES[i-1]] = true;
     }
 }
