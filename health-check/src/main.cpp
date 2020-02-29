@@ -23,7 +23,7 @@ void setup() {
     delay(3000);
 
     leds.setup();
-    leds.setBrightness(BRIGHTNESS);
+    leds.setBrightness(FULL_BRIGHTNESS);
 
     Serial.println("Connecting...");
     wifi.connect(WIFI_SSID, WIFI_PASSWORD);

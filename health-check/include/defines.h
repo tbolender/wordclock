@@ -3,7 +3,7 @@
 
 #define NUM_LEDS 114
 
-#define BRIGHTNESS 100
+#define FULL_BRIGHTNESS 100
 #define NIGHT_BRIGHTNESS 50
 
 #endif //WORDCLOCK_DEFINES_H
