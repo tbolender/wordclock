@@ -23,8 +23,8 @@ int NTP::getSeconds() {
     return client.getSeconds();
 }
 
-void NTP::updateIfNecessary() {
-    client.update();
+bool NTP::updateIfNecessary() {
+    return client.update();
 }
 
 String NTP::getFormattedTime() {

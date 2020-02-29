@@ -21,7 +21,7 @@ public:
     Layout();
     virtual ~Layout();
 
-    bool* getSingleMinutesLayout();
+    bool* getSingleMinutesLayout(int minutes);
     bool* getLayout(int hours, int minutes);
 };
 

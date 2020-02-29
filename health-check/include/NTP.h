@@ -22,7 +22,7 @@ public:
 
     int getSeconds();
 
-    void updateIfNecessary();
+    bool updateIfNecessary();
 
     String getFormattedTime();
 };

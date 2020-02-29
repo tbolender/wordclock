@@ -16,6 +16,10 @@ LEDs leds;
 Layout layout;
 Renderer renderer(leds, layout);
 
+void connectWifi();
+
+void retrieveTime();
+
 void setup() {
     Serial.begin(74880);
 
@@ -25,15 +29,29 @@ void setup() {
     leds.setup();
     leds.setBrightness(FULL_BRIGHTNESS);
 
+    connectWifi();
+
+    ntp.setup();
+    retrieveTime();
+
+    leds.clear();
+}
+
+void connectWifi() {
     Serial.println("Connecting...");
     wifi.connect(WIFI_SSID, WIFI_PASSWORD);
     while(!wifi.isConnected()) {
-        delay(500);
+        delay(200);
     }
-    renderer.showConnected();
+    renderer.showWifiStatus(true);
     Serial.println("Connected!");
+}
 
-    ntp.setup();
+void retrieveTime() {
+    Serial.println("Retrieving time...");
+    while(!ntp.updateIfNecessary()) {
+    }
+    Serial.println("Found times!");
 }
 
 void loop() {

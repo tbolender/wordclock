@@ -95,9 +95,9 @@ void Layout::setHours(int hours, int minutes) {
     }
 }
 
-bool* Layout::getSingleMinutesLayout() {
+bool* Layout::getSingleMinutesLayout(int minutes) {
     clear();
-    setSingleMinutes(4);
+    setSingleMinutes(minutes);
     return ledMask;
 }
 
