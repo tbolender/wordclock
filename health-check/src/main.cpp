@@ -16,27 +16,6 @@ LEDs leds;
 Layout layout;
 Renderer renderer(leds, layout);
 
-void connectWifi();
-
-void retrieveTime();
-
-void setup() {
-    Serial.begin(74880);
-
-    // Sanity check delay - allows reprogramming if accidently blowing power w/leds
-    delay(3000);
-
-    leds.setup();
-    leds.setBrightness(FULL_BRIGHTNESS);
-
-    connectWifi();
-
-    ntp.setup();
-    retrieveTime();
-
-    leds.clear();
-}
-
 void connectWifi() {
     Serial.println("Connecting...");
     wifi.connect(WIFI_SSID, WIFI_PASSWORD);
@@ -52,6 +31,20 @@ void retrieveTime() {
     while(!ntp.updateIfNecessary()) {
     }
     Serial.println("Found times!");
+}
+
+void setup() {
+    Serial.begin(74880);
+
+    leds.setup();
+    leds.setBrightness(FULL_BRIGHTNESS);
+
+    connectWifi();
+
+    ntp.setup();
+    retrieveTime();
+
+    leds.clear();
 }
 
 void loop() {
