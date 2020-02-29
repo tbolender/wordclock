@@ -93,7 +93,7 @@ bool* Layout::getLayout(int hours, int minutes) {
 
     setItIs();
     setSingleMinutes(minutes);
-    setMinutes(hours);
+    setMinutes(minutes);
     setHours(hours, minutes);
 
     return ledMask;
