@@ -33,7 +33,5 @@ void loop() {
     Serial.print(ntp.getSeconds());
     Serial.println();
 
-    leds.setTime(ntp);
-
     delay(1000);
 }

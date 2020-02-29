@@ -19,8 +19,9 @@ public:
 
     void setBrightness(uint8_t brightness);
 
-    void setTime(NTP& ntp);
-    void setTime(int hours, int minutes);
+    CRGB& operator[](int index);
+
+    void show();
 };
 
 #endif //HEALTH_CHECK_LEDS_H
