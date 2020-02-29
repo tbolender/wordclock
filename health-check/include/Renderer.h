@@ -1,5 +1,5 @@
-#ifndef HEALTH_CHECK_RENDERER_H
-#define HEALTH_CHECK_RENDERER_H
+#ifndef WORDCLOCK_RENDERER_H
+#define WORDCLOCK_RENDERER_H
 
 #include <LEDs.h>
 #include <NTP.h>
@@ -19,4 +19,4 @@ public:
 };
 
 
-#endif //HEALTH_CHECK_RENDERER_H
+#endif //WORDCLOCK_RENDERER_H

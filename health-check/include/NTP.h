@@ -1,5 +1,5 @@
-#ifndef HEALTH_CHECK_NTP_H
-#define HEALTH_CHECK_NTP_H
+#ifndef WORDCLOCK_NTP_H
+#define WORDCLOCK_NTP_H
 
 #include <NTPClient.h>
 #include <WiFiUdp.h>
@@ -25,4 +25,4 @@ public:
     void updateIfNecessary();
 };
 
-#endif //HEALTH_CHECK_NTP_H
+#endif //WORDCLOCK_NTP_H

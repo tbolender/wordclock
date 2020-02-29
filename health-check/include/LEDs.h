@@ -1,5 +1,5 @@
-#ifndef HEALTH_CHECK_LEDS_H
-#define HEALTH_CHECK_LEDS_H
+#ifndef WORDCLOCK_LEDS_H
+#define WORDCLOCK_LEDS_H
 
 #include <defines.h>
 #include <FastLED.h>
@@ -24,4 +24,4 @@ public:
     void show();
 };
 
-#endif //HEALTH_CHECK_LEDS_H
+#endif //WORDCLOCK_LEDS_H

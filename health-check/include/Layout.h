@@ -1,5 +1,5 @@
-#ifndef HEALTH_CHECK_LAYOUT_H
-#define HEALTH_CHECK_LAYOUT_H
+#ifndef WORDCLOCK_LAYOUT_H
+#define WORDCLOCK_LAYOUT_H
 
 #include <defines.h>
 
@@ -25,4 +25,4 @@ public:
 };
 
 
-#endif //HEALTH_CHECK_LAYOUT_H
+#endif //WORDCLOCK_LAYOUT_H
