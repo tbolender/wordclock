@@ -1,10 +1,10 @@
 #ifndef HEALTH_CHECK_LEDS_H
 #define HEALTH_CHECK_LEDS_H
 
+#include <defines.h>
 #include <FastLED.h>
 #include <NTP.h>
 
-#define NUM_LEDS 114
 #define LED_DATA_PIN D4
 
 class LEDs {

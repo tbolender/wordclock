@@ -1,6 +1,7 @@
 #ifndef HEALTH_CHECK_LAYOUT_H
 #define HEALTH_CHECK_LAYOUT_H
 
+#include <defines.h>
 
 class Layout {
 protected:
@@ -9,7 +10,7 @@ protected:
     static const int MINUTES[12][12];
     static const int HOURS[12][6];
 
-    bool ledMask[114];
+    bool ledMask[NUM_LEDS];
 
     void clear();
     void setItIs();
