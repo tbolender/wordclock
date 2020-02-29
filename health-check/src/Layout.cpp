@@ -81,7 +81,14 @@ void Layout::setHours(int hours, int minutes) {
         ++hours;
     hours %= 12;
 
-    // FIXME: Handle EIN UHR case
+    // German language: Handle EIN UHR case
+    if(hours == 1 && minutes == 0) {
+        for(int i = 0; i < 3; i++) {
+            ledMask[HOURS[1][i]] = true;
+        }
+        return;
+    }
+
     for(int i : HOURS[hours]) {
         if(i < 0) break;
         ledMask[i] = true;
