@@ -4,10 +4,12 @@
 #include <Wifi.h>
 #include <NTP.h>
 #include <Layout.h>
+#include <Renderer.h>
 
 NTP ntp;
 LEDs leds;
 Layout layout;
+Renderer renderer(leds, layout);
 
 void setup() {
     Serial.begin(74880);
@@ -32,6 +34,8 @@ void loop() {
     Serial.print(":");
     Serial.print(ntp.getSeconds());
     Serial.println();
+
+    renderer.render(ntp);
 
     delay(1000);
 }
