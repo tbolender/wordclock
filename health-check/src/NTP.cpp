@@ -39,7 +39,7 @@ int NTP::getYear() {
     return year(client.getEpochTime());
 }
 
-unsigned long NTP::getEpochTime() {
+time_t NTP::getEpochTime() {
     return client.getEpochTime();
 }
 

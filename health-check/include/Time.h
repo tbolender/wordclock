@@ -21,7 +21,7 @@ public:
 
     virtual int getYear() = 0;
 
-    virtual unsigned long getEpochTime() = 0;
+    virtual time_t getEpochTime() = 0;
 
     virtual bool updateIfNecessary() = 0;
 

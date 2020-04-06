@@ -30,7 +30,7 @@ public:
 
     int getYear() override;
 
-    unsigned long getEpochTime() override;
+    time_t getEpochTime() override;
 
     bool updateIfNecessary() override;
 
