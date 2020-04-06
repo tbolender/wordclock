@@ -1,11 +1,12 @@
 #ifndef WORDCLOCK_NTP_H
 #define WORDCLOCK_NTP_H
 
+#include <Time.h>
 #include <NTPClient.h>
 #include <WiFiUdp.h>
 
 
-class NTP {
+class NTP : public Time {
 protected:
     WiFiUDP wifi;
     NTPClient client;
@@ -15,17 +16,17 @@ public:
     NTP(long offset);
     virtual ~NTP();
 
-    void setup();
+    void setup() override;
 
-    int getHours();
+    int getHours() override;
 
-    int getMinutes();
+    int getMinutes() override;
 
-    int getSeconds();
+    int getSeconds() override;
 
-    bool updateIfNecessary();
+    bool updateIfNecessary() override;
 
-    String getFormattedTime();
+    String getFormattedTime() override;
 };
 
 #endif //WORDCLOCK_NTP_H
