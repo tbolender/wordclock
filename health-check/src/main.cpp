@@ -9,9 +9,14 @@
 #include <NTP.h>
 #include <Layout.h>
 #include <Renderer.h>
+#include <TimezoneTime.h>
 
 Wifi wifi;
+
 NTP ntp(TIMEZONE_OFFSET);
+Timezone timezone(WINTER_TIME, SUMMER_TIME);
+TimezoneTime timezoneTime(ntp, timezone);
+
 LEDs leds;
 Layout layout;
 Renderer renderer(leds, layout);
@@ -28,7 +33,7 @@ void connectWifi() {
 
 void retrieveTime() {
     Serial.println("Retrieving time...");
-    while(!ntp.updateIfNecessary()) {
+    while(!timezoneTime.updateIfNecessary()) {
     }
     Serial.println("Found times!");
 }
@@ -41,16 +46,16 @@ void setup() {
 
     connectWifi();
 
-    ntp.setup();
+    timezoneTime.setup();
     retrieveTime();
 
     leds.clear();
 }
 
 void loop() {
-    ntp.updateIfNecessary();
+    timezoneTime.updateIfNecessary();
 
-    Serial.println(ntp.getFormattedTime());
+    Serial.println(timezoneTime.getFormattedTime());
 
     renderer.render(ntp);
 
