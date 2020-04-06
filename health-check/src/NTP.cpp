@@ -1,4 +1,5 @@
 #include <NTP.h>
+#include <TimeLib.h>
 
 NTPClient* timeClient;
 
@@ -14,16 +15,32 @@ void NTP::setup() {
     client.begin();
 }
 
-int NTP::getHours() {
-    return client.getHours();
+int NTP::getSeconds() {
+    return client.getSeconds();
 }
 
 int NTP::getMinutes() {
     return client.getMinutes();
 }
 
-int NTP::getSeconds() {
-    return client.getSeconds();
+int NTP::getHours() {
+    return client.getHours();
+}
+
+int NTP::getDay() {
+    return client.getDay();
+}
+
+int NTP::getMonth() {
+    return month(client.getEpochTime());
+}
+
+int NTP::getYear() {
+    return year(client.getEpochTime());
+}
+
+unsigned long NTP::getEpochTime() {
+    return client.getEpochTime();
 }
 
 bool NTP::updateIfNecessary() {

@@ -18,11 +18,19 @@ public:
 
     void setup() override;
 
-    int getHours() override;
+    int getSeconds() override;
 
     int getMinutes() override;
 
-    int getSeconds() override;
+    int getHours() override;
+
+    int getDay() override;
+
+    int getMonth() override;
+
+    int getYear() override;
+
+    unsigned long getEpochTime() override;
 
     bool updateIfNecessary() override;
 
