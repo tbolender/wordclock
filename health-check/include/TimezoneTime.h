@@ -1,20 +1,18 @@
-#ifndef WORDCLOCK_NTP_H
-#define WORDCLOCK_NTP_H
+#ifndef WORDCLOCK_TIMEZONE_TIME_H
+#define WORDCLOCK_TIMEZONE_TIME_H
 
+#include <Arduino.h>
 #include <Time.h>
-#include <NTPClient.h>
-#include <WiFiUdp.h>
+#include <Timezone.h>
 
-
-class NTP : public Time {
+class TimezoneTime : public Time {
 protected:
-    WiFiUDP wifi;
-    NTPClient client;
+    Time& utcTime;
+    Timezone& timezone;
 
 public:
-    NTP();
-    NTP(long offset);
-    virtual ~NTP();
+    TimezoneTime(Time& utcTime, Timezone& timezone);
+    ~TimezoneTime() override;
 
     void setup() override;
 
@@ -37,4 +35,4 @@ public:
     String getFormattedTime() override;
 };
 
-#endif //WORDCLOCK_NTP_H
+#endif //WORDCLOCK_TIMEZONE_TIME_H
