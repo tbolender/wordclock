@@ -30,6 +30,8 @@ public:
 
     time_t getEpochTime() override;
 
+    bool isDaylightSavingActive();
+
     bool updateIfNecessary() override;
 
     String getFormattedTime() override;

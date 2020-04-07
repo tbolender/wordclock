@@ -37,6 +37,10 @@ time_t TimezoneTime::getEpochTime() {
     return timezone.toLocal(utcTime.getEpochTime());
 }
 
+bool TimezoneTime::isDaylightSavingActive() {
+    return timezone.utcIsDST(utcTime.getEpochTime());
+}
+
 bool TimezoneTime::updateIfNecessary() {
     return utcTime.updateIfNecessary();
 }
