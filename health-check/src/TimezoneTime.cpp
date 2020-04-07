@@ -41,6 +41,10 @@ bool TimezoneTime::isDaylightSavingActive() {
     return timezone.utcIsDST(utcTime.getEpochTime());
 }
 
+float TimezoneTime::getOffset() {
+    return (getEpochTime() - utcTime.getEpochTime()) / (60.0f * 60.0f);
+}
+
 bool TimezoneTime::updateIfNecessary() {
     return utcTime.updateIfNecessary();
 }

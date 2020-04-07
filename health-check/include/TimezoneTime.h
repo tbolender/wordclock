@@ -32,6 +32,8 @@ public:
 
     bool isDaylightSavingActive();
 
+    float getOffset();
+
     bool updateIfNecessary() override;
 
     String getFormattedTime() override;
