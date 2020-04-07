@@ -10,6 +10,7 @@
 #include <Layout.h>
 #include <Renderer.h>
 #include <TimezoneTime.h>
+#include <Brightness.h>
 
 Wifi wifi;
 
@@ -19,6 +20,7 @@ TimezoneTime timezoneTime(ntp, timezone);
 
 LEDs leds;
 Layout layout;
+Brightness brightness(timezoneTime, FULL_BRIGHTNESS, NIGHT_BRIGHTNESS);
 Renderer renderer(leds, layout);
 
 void connectWifi() {
@@ -57,6 +59,7 @@ void loop() {
 
     Serial.println(timezoneTime.getFormattedTime());
 
+    leds.setBrightness(brightness.getCurrentBrightness());
     renderer.render(timezoneTime);
 
     delay(10 * 1000);
