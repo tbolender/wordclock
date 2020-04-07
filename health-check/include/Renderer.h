@@ -14,7 +14,7 @@ public:
     Renderer(LEDs& leds, Layout& layout);
     virtual ~Renderer();
 
-    void render(NTP& ntp);
+    void render(Time& ntp);
     void render(int hours, int minutes);
     void render(const bool* ledMask);
 

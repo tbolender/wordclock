@@ -5,8 +5,8 @@ Renderer::Renderer(LEDs &leds, Layout& layout) : leds(leds), layout(layout) {
 
 Renderer::~Renderer() = default;
 
-void Renderer::render(NTP& ntp) {
-    render(ntp.getHours(), ntp.getMinutes());
+void Renderer::render(Time& time) {
+    render(time.getHours(), time.getMinutes());
 }
 
 void Renderer::render(int hours, int minutes) {

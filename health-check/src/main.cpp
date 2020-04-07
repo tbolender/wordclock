@@ -57,7 +57,7 @@ void loop() {
 
     Serial.println(timezoneTime.getFormattedTime());
 
-    renderer.render(ntp);
+    renderer.render(timezoneTime);
 
     delay(10 * 1000);
 }
