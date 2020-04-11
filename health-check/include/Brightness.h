@@ -8,14 +8,21 @@
 class Brightness {
 protected:
     TimezoneTime& time;
-    Dusk2Dawn& sunPosition;
     uint8_t dayBrightness;
     uint8_t nightBrightness;
 
-public:
-    Brightness(TimezoneTime& time, Dusk2Dawn& sunPosition, uint8_t dayBrightness, uint8_t nightBrightness);
+    int sunriseMin;
+    int sunsetMin;
 
-    uint8_t getCurrentBrightness();
+public:
+    Brightness(TimezoneTime& time, uint8_t dayBrightness, uint8_t nightBrightness);
+
+    void setSunrise(int sunriseMinutes);
+    void setSunset(int sunsetMinutes);
+
+    void setSolarTime(Dusk2Dawn& calculator);
+
+    uint8_t getBrightness();
 };
 
 
