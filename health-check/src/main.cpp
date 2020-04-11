@@ -11,12 +11,11 @@
 #include <NTPTime.h>
 #include <Layout.h>
 #include <Renderer.h>
-#include <TimezoneTime.h>
 #include <Brightness.h>
 
 Wifi wifi;
 
-Timezone timezone(WINTER_TIME, SUMMER_TIME);
+Timezone timezone(SUMMER_TIME, WINTER_TIME);
 NTPTime timezoneTime(timezone);
 Dusk2Dawn solarCalculator(LATITUDE, LONGITUDE, timezoneTime.getOffset());
 
