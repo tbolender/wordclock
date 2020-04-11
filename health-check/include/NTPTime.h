@@ -4,35 +4,28 @@
 #include <Time.h>
 #include <NTPClient.h>
 #include <WiFiUdp.h>
+#include <Timezone.h>
 
 
-class NTP : public Time {
+class NTPTime : public Time {
 protected:
     WiFiUDP wifi;
     NTPClient client;
+    Timezone& timezone;
 
 public:
-    NTP();
-    NTP(long offset);
-    virtual ~NTP();
+    explicit NTPTime(Timezone& timezone);
+    ~NTPTime() override;
 
     void setup() override;
-
-    int getSeconds() override;
-
-    int getMinutes() override;
-
-    int getHours() override;
-
-    int getDay() override;
-
-    int getMonth() override;
-
-    int getYear() override;
 
     time_t getEpochTime() override;
 
     bool updateIfNecessary() override;
+
+    bool isDaylightSavingActive() override;
+
+    float getOffset() override;
 
     String getFormattedTime() override;
 };

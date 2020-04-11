@@ -4,21 +4,24 @@
 #include <credentials.h>
 #include <defines.h>
 
+#include <Dusk2Dawn.h>
+
 #include <LEDs.h>
 #include <Wifi.h>
-#include <NTP.h>
+#include <NTPTime.h>
 #include <Layout.h>
 #include <Renderer.h>
-#include <TimezoneTime.h>
+#include <Brightness.h>
 
 Wifi wifi;
 
-NTP ntp(TIMEZONE_OFFSET);
-Timezone timezone(WINTER_TIME, SUMMER_TIME);
-TimezoneTime timezoneTime(ntp, timezone);
+Timezone timezone(SUMMER_TIME, WINTER_TIME);
+NTPTime timezoneTime(timezone);
+Dusk2Dawn solarCalculator(LATITUDE, LONGITUDE, timezoneTime.getOffset());
 
 LEDs leds;
 Layout layout;
+Brightness brightness(timezoneTime, 60, FULL_BRIGHTNESS, NIGHT_BRIGHTNESS);
 Renderer renderer(leds, layout);
 
 void connectWifi() {
@@ -57,6 +60,8 @@ void loop() {
 
     Serial.println(timezoneTime.getFormattedTime());
 
+    brightness.setSolarTime(solarCalculator);
+    leds.setBrightness(brightness.getBrightness());
     renderer.render(timezoneTime);
 
     delay(10 * 1000);

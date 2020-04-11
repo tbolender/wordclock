@@ -4,28 +4,35 @@
 #include <Arduino.h>
 
 class Time {
+private:
+    char buffer[20];
+
 public:
     virtual ~Time() = default;
 
     virtual void setup() = 0;
 
-    virtual int getSeconds() = 0;
+    virtual int getSeconds();
 
-    virtual int getMinutes() = 0;
+    virtual int getMinutes();
 
-    virtual int getHours() = 0;
+    virtual int getHours();
 
-    virtual int getDay() = 0;
+    virtual int getDay();
 
-    virtual int getMonth() = 0;
+    virtual int getMonth();
 
-    virtual int getYear() = 0;
+    virtual int getYear();
 
     virtual time_t getEpochTime() = 0;
 
     virtual bool updateIfNecessary() = 0;
 
-    virtual String getFormattedTime() = 0;
+    virtual bool isDaylightSavingActive() = 0;
+
+    virtual float getOffset() = 0;
+
+    virtual String getFormattedTime();
 };
 
 #endif //WORDCLOCK_TIME_H
