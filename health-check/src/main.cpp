@@ -14,7 +14,7 @@
 
 Wifi wifi;
 
-NTP ntp(TIMEZONE_OFFSET);
+NTP ntp;
 Timezone timezone(WINTER_TIME, SUMMER_TIME);
 TimezoneTime timezoneTime(ntp, timezone);
 
