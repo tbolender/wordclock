@@ -3,15 +3,17 @@
 
 
 #include <TimezoneTime.h>
+#include <Dusk2Dawn.h>
 
 class Brightness {
 protected:
     TimezoneTime& time;
+    Dusk2Dawn& sunPosition;
     uint8_t dayBrightness;
     uint8_t nightBrightness;
 
 public:
-    Brightness(TimezoneTime& time, uint8_t dayBrightness, uint8_t nightBrightness);
+    Brightness(TimezoneTime& time, Dusk2Dawn& sunPosition, uint8_t dayBrightness, uint8_t nightBrightness);
 
     uint8_t getCurrentBrightness();
 };
