@@ -8,7 +8,7 @@ Brightness::Brightness(Time& time,
     this->dayBrightness = dayBrightness;
 
     setSunrise(8 * 60);
-    setSunset(18 * 60);
+    setSunset(17 * 60);
 }
 
 void Brightness::setSunrise(int sunriseMinutes) {
