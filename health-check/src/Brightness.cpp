@@ -10,6 +10,16 @@ Brightness::Brightness(TimezoneTime& time,
 }
 
 uint8_t Brightness::getCurrentBrightness() {
-    return dayBrightness;
+    int sunriseMin = sunPosition.sunrise(time.getYear(), time.getMonth(), time.getDay(), time.isDaylightSavingActive());
+    int sunsetMin = sunPosition.sunset(time.getYear(), time.getMonth(), time.getDay(), time.isDaylightSavingActive());
+    int currentMin = time.getHours() * 60 + time.getMinutes();
+
+    if(currentMin < sunriseMin) {
+        return nightBrightness;
+    }
+    else if(currentMin < sunsetMin) {
+        return dayBrightness;
+    }
+    return nightBrightness;
 }
 
