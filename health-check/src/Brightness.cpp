@@ -1,6 +1,6 @@
 #include <Brightness.h>
 
-Brightness::Brightness(TimezoneTime& time,
+Brightness::Brightness(Time& time,
         uint8_t dayBrightness,
         uint8_t nightBrightness)
         : time(time) {

@@ -8,7 +8,7 @@
 
 #include <LEDs.h>
 #include <Wifi.h>
-#include <NTP.h>
+#include <NTPTime.h>
 #include <Layout.h>
 #include <Renderer.h>
 #include <TimezoneTime.h>
@@ -16,9 +16,8 @@
 
 Wifi wifi;
 
-NTP ntp;
 Timezone timezone(WINTER_TIME, SUMMER_TIME);
-TimezoneTime timezoneTime(ntp, timezone);
+NTPTime timezoneTime(timezone);
 Dusk2Dawn solarCalculator(LATITUDE, LONGITUDE, timezoneTime.getOffset());
 
 LEDs leds;

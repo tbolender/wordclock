@@ -2,12 +2,12 @@
 #define HEALTH_CHECK_BRIGHTNESS_H
 
 
-#include <TimezoneTime.h>
+#include <Time.h>
 #include <Dusk2Dawn.h>
 
 class Brightness {
 protected:
-    TimezoneTime& time;
+    Time& time;
     uint8_t dayBrightness;
     uint8_t nightBrightness;
 
@@ -15,7 +15,7 @@ protected:
     int sunsetMin;
 
 public:
-    Brightness(TimezoneTime& time, uint8_t dayBrightness, uint8_t nightBrightness);
+    Brightness(Time& time, uint8_t dayBrightness, uint8_t nightBrightness);
 
     void setSunrise(int sunriseMinutes);
     void setSunset(int sunsetMinutes);

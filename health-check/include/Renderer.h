@@ -2,7 +2,7 @@
 #define WORDCLOCK_RENDERER_H
 
 #include <LEDs.h>
-#include <NTP.h>
+#include <NTPTime.h>
 #include <Layout.h>
 
 class Renderer {

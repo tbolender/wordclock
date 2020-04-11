@@ -3,7 +3,6 @@
 
 #include <defines.h>
 #include <FastLED.h>
-#include <NTP.h>
 
 #define LED_DATA_PIN D4
 
