@@ -21,7 +21,7 @@ Dusk2Dawn solarCalculator(LATITUDE, LONGITUDE, timezoneTime.getOffset());
 
 LEDs leds;
 Layout layout;
-Brightness brightness(timezoneTime, FULL_BRIGHTNESS, NIGHT_BRIGHTNESS);
+Brightness brightness(timezoneTime, 60, FULL_BRIGHTNESS, NIGHT_BRIGHTNESS);
 Renderer renderer(leds, layout);
 
 void connectWifi() {

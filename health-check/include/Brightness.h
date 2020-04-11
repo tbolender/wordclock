@@ -8,6 +8,7 @@
 class Brightness {
 protected:
     Time& time;
+    int transitionMinutes;
     uint8_t dayBrightness;
     uint8_t nightBrightness;
 
@@ -15,7 +16,7 @@ protected:
     int sunsetMin;
 
 public:
-    Brightness(Time& time, uint8_t dayBrightness, uint8_t nightBrightness);
+    Brightness(Time& time, int transitionMin, uint8_t dayBrightness, uint8_t nightBrightness);
 
     void setSunrise(int sunriseMinutes);
     void setSunset(int sunsetMinutes);
