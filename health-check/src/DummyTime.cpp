@@ -2,9 +2,10 @@
 #include <TimeLib.h>
 
 
-DummyTime::DummyTime(int year, int month, int day, bool daylightSaving) {
+DummyTime::DummyTime(int year, int month, int day, int offset, bool daylightSaving) {
     setTime(0, 0, 0, day, month, year);
     this->dayMinutes = 0;
+    this->offset = offset;
     this->daylightSaving = daylightSaving;
 }
 
@@ -27,5 +28,5 @@ bool DummyTime::isDaylightSavingActive() {
 }
 
 float DummyTime::getOffset() {
-    return 120;
+    return offset;
 }

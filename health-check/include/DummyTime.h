@@ -5,15 +5,13 @@
 
 class DummyTime : public Time {
 protected:
-    int year;
-    int month;
-    int day;
     int dayMinutes;
+    int offset;
 
     bool daylightSaving;
 
 public:
-    explicit DummyTime(int year, int month, int day, bool daylightSaving);
+    explicit DummyTime(int year, int month, int day, int offset, bool daylightSaving);
     ~DummyTime() override;
 
     void setup() override;
