@@ -26,5 +26,6 @@ int Time::getYear() {
 }
 
 String Time::getFormattedTime() {
-    return "";
+    sprintf(buffer, "%04d-%02d-%02d %02d:%02d:%02d", getYear(), getMonth(), getDay(), getHours(), getMinutes(), getSeconds());
+    return String(buffer);
 }

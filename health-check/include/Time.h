@@ -4,6 +4,9 @@
 #include <Arduino.h>
 
 class Time {
+private:
+    char buffer[20];
+
 public:
     virtual ~Time() = default;
 
