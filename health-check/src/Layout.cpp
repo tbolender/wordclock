@@ -82,7 +82,7 @@ void Layout::setHours(int hours, int minutes) {
     hours %= 12;
 
     // German language: Handle EIN UHR case
-    if(hours == 1 && minutes == 0) {
+    if(hours == 1 && minutes < 5) {
         for(int i = 0; i < 3; i++) {
             ledMask[HOURS[1][i]] = true;
         }
