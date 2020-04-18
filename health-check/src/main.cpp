@@ -64,5 +64,5 @@ void loop() {
     leds.setBrightness(brightness.getBrightness());
     renderer.render(timezoneTime);
 
-    delay(10 * 1000);
+    delay(25 * 1000);
 }
