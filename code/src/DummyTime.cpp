@@ -19,7 +19,7 @@ time_t DummyTime::getEpochTime() {
 }
 
 bool DummyTime::updateIfNecessary() {
-    dayMinutes += 5;
+    dayMinutes += 1;
     return true;
 }
 
